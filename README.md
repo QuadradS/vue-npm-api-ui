@@ -1,4 +1,4 @@
-# test-task
+# Vue npm api app
 
 ## Project setup
 ```
