@@ -21,7 +21,8 @@ export default {
   name: 'ContentCard',
   props: {
     package: {
-      type: Object
+      type: Object,
+      required: true
     }
   }
 }

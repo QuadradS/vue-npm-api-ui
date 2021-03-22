@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen max-w-7xl mx-auto p-2.5 rounded flex flex-wrap">
+  <div class="min-h-screen max-w-7xl mx-auto p-2.5 rounded flex flex-wrap items-start">
     <header-component></header-component>
     <content-component></content-component>
     <footer-component></footer-component>
