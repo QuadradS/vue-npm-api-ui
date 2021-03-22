@@ -22,7 +22,9 @@
                   <strong>Description:</strong> {{ this.getSelected().description }}
                 </p>
                 <p class="text-sm text-gray-500 pb-1">
-                  <strong>Date:</strong> {{ this.getSelected().date }}
+                  <strong>Date:</strong> {{
+                    this.getDate(this.getSelected().date)
+                  }}
                 </p>
                 <p class="text-sm text-gray-500 pb-1">
                   <strong>Scope:</strong> {{ this.getSelected().scope }}
@@ -34,7 +36,7 @@
                   <strong>Publisher:</strong> {{ this.getSelected().publisher?.username }}
                   {{ this.getSelected().publisher?.email }}
                 </p>
-                <p class="text-sm text-gray-500 ">Links:</p>
+                <p class="text-sm text-gray-500 "><strong>Links:</strong></p>
                 <span v-for="k in Object.keys(this.getSelected().links)" :key="k"
                       class="mr-1 text-sm text-gray-500 pb-1">
                   <a class="underline" target="_blank" :href="this.getSelected().links[k]">{{ k }}</a>
@@ -57,10 +59,14 @@
 
 <script>
 import {mapGetters, mapMutations} from "vuex";
+import * as dayjs from "dayjs";
 
 export default {
   name: 'ContentModal',
   methods: {
+    getDate(d){
+      return dayjs(d).format('MM.DD.YYYY')
+    },
     ...mapGetters({
       getSelected: 'packages/getSelected'
     }),
