@@ -37,7 +37,7 @@
                 <p class="text-sm text-gray-500 ">Links:</p>
                 <span v-for="k in Object.keys(this.getSelected().links)" :key="k"
                       class="mr-1 text-sm text-gray-500 pb-1">
-                  <a class="underline" target="_blank" href="{{this.getSelected().links[k]}}">{{ k }}</a>
+                  <a class="underline" target="_blank" :href="this.getSelected().links[k]">{{ k }}</a>
                 </span>
 
               </div>

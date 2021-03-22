@@ -1,7 +1,13 @@
 <template>
+
+  <div v-if="!this.getAllPackages().length" class="w-full my-2.5 py-2.5">
+    <h2 class="text-center text-3xl text-gray-500">There is nothing</h2>
+  </div>
+
   <div v-if="this.getAllPackages().length" class="w-full my-2.5 py-2.5">
     <div class="p-2.5 bg-white grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-      <content-card @onSelect="selectPackage" v-for="p in this.getAllPackages()" :package="p.package" :key="p.package.name"></content-card>
+      <content-card @onSelect="selectPackage" v-for="p in this.getAllPackages()" :package="p.package"
+                    :key="p.package.name"></content-card>
     </div>
     <content-pagination @onChangePage="handleChangePage" :total="this.getTotal()"></content-pagination>
     <content-modal></content-modal>

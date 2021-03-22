@@ -16,7 +16,6 @@ export default {
       return state.total
     },
     getSelected(state) {
-      console.log(state.packages.find((p) => p.package.name === state.selectedPackage)?.package)
       return state.packages.find((p) => p.package.name === state.selectedPackage)?.package
     }
   },

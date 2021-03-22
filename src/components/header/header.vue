@@ -1,7 +1,7 @@
 <template>
   <header class="w-full border-b border-gray-200 p-2.5">
     <form @submit.prevent="this.handleSubmit">
-      <input v-model="value" class="rounded border-2 px-1.5 py-0.5" type="text"/>
+      <input placeholder="Search packages" required v-model="value" class="rounded border-2 px-1.5 py-0.5" type="text"/>
       <button
           type="submit"
           class="bg-blue-500 rounded px-2.5 font-light ml-1.5 py-0.5 text-white"

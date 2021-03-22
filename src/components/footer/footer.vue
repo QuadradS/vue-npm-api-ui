@@ -4,10 +4,10 @@
       Author: <strong>Danil Sitdikov</strong>
     </div>
     <div>
-      Github: <a class="text-blue-600" href="#"> Link to github</a>
+      Github: <a target="_blank" class="text-blue-600" href="https://github.com/QuadradS"> Link to github</a>
     </div>
     <div>
-      CV: <a class="text-blue-600" href="#">Link to CV</a>
+      CV: <a target="_blank" class="text-blue-600" href="https://quadrads.github.io/summary/">Link to CV</a>
     </div>
   </div>
 </template>
