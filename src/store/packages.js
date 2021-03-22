@@ -14,6 +14,10 @@ export default {
     },
     getTotal(state) {
       return state.total
+    },
+    getSelected(state) {
+      console.log(state.packages.find((p) => p.package.name === state.selectedPackage)?.package)
+      return state.packages.find((p) => p.package.name === state.selectedPackage)?.package
     }
   },
   mutations: {
@@ -23,6 +27,9 @@ export default {
     },
     SET_VALUE(state, {value}) {
       state.searchValue = value
+    },
+    SELECT_PACKAGE(state, {p}) {
+      state.selectedPackage = p
     }
   },
   actions: {

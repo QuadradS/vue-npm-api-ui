@@ -1,6 +1,5 @@
 <template>
-  <div class="bg-gray-50 rounded p-2.5 border ">
-
+  <div class="bg-gray-50 rounded p-2.5 border cursor-pointer hover:shadow-xl" @click="this.handleSelect">
     <div class="border-b mb-2.5">
       <h2 class="text-2xl">{{ package.name }}</h2>
     </div>
@@ -23,6 +22,11 @@ export default {
     package: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    handleSelect() {
+      this.$emit('onSelect', {p: this.package.name})
     }
   }
 }
